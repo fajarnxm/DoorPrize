@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Dev\DoorPrize\DoorPrize\DoorPrize.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="D:\Dev\DoorPrize\DoorPrize\App.config" />
+  <event action="Analyze" type="Success" name="EmployeeMaster.resx" path="D:\Dev\DoorPrize\DoorPrize\EmployeeMaster.resx" />
+  <event action="Analyze" type="Success" name="LuckyDraw.resx" path="D:\Dev\DoorPrize\DoorPrize\LuckyDraw.resx" />
+  <event action="Analyze" type="Success" name="MainMenu.resx" path="D:\Dev\DoorPrize\DoorPrize\MainMenu.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="D:\Dev\DoorPrize\DoorPrize\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="D:\Dev\DoorPrize\DoorPrize\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Registration.resx" path="D:\Dev\DoorPrize\DoorPrize\Registration.resx" />
+  <event action="Analyze" type="Success" name="Report.resx" path="D:\Dev\DoorPrize\DoorPrize\Report.resx" />
+  <event action="Analyze" type="Success" name="Setting.resx" path="D:\Dev\DoorPrize\DoorPrize\Setting.resx" />
+  <event action="Analyze" type="Success" name="DoorPrize" path="D:\Dev\DoorPrize\DoorPrize\DoorPrize.csproj" />
+  <event action="Analyze" type="Success" name="DoorPrize" path="D:\Dev\DoorPrize\DoorPrize.sln" />
+</log>

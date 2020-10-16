@@ -1,0 +1,4 @@
+[2/12/2019, 8:59:41 AM] layer "setting-icon.png32": Duplicate path: setting-icon.png
+[2/12/2019, 8:59:41 AM] layer "textBox.png32": Duplicate path: textBox.png
+[2/12/2019, 8:59:41 AM] layer "Submit-btn.png32": Duplicate path: Submit-btn.png
+[2/12/2019, 8:59:41 AM] layer "setting-icon.png32": Duplicate path: setting-icon.png
