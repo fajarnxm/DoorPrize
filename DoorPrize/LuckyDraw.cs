@@ -170,15 +170,15 @@ namespace DoorPrize
                         if (ShuffleNumber.Columns.Contains("NIK"))
                         {
                             ShuffleNumber.Columns.Remove("NIK");
-                            ShuffleNumber.Columns.Remove("EmployeeName");
+                            ShuffleNumber.Columns.Remove("Name");
                             WinnerNumber.Columns.Remove("NIK");
-                            WinnerNumber.Columns.Remove("EmployeeName");
+                            WinnerNumber.Columns.Remove("Name");
                         }
 
                         ShuffleNumber.Columns.Add("NIK");
-                        ShuffleNumber.Columns.Add("EmployeeName");
+                        ShuffleNumber.Columns.Add("Name");
                         WinnerNumber.Columns.Add("NIK");
-                        WinnerNumber.Columns.Add("EmployeeName");
+                        WinnerNumber.Columns.Add("Name");
 
                         GridResult1.DataSource = WinnerNumber;
                         GridResult1.MasterTemplate.Columns[0].IsVisible = false;
