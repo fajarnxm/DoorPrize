@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <settings>
-  <connection>Data Source=IT-FAJAR\LENOVO;Initial Catalog=ITDEV_DoorPrize;Persist Security Info=True;User ID=sa;Password=123456</connection>
+  <connection>Data Source=192.168.10.18\sql2012;Initial Catalog=ITDEV_DoorPrize;Persist Security Info=True;User ID=sa;Password=Password95</connection>
   <modelCon>metadata=res://*/Layouts.CycleBilling.InvLimitEDM.csdl|res://*/Layouts.CycleBilling.InvLimitEDM.ssdl|res://*/Layouts.CycleBilling.InvLimitEDM.msl;provider=System.Data.SqlClient;provider connection string="data source=(local);initial catalog=MyDb;persist security info=True;user id=sa;password=Password95;MultipleActiveResultSets=True;App=EntityFramework"</modelCon>
   <site></site>
   <web></web>

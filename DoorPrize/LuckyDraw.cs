@@ -39,15 +39,18 @@ namespace DoorPrize
 
         private void LuckyDraw_Load(object sender, EventArgs e)
         {
+            GridResult2.Hide();
+            GridResult3.Hide();
+            GridResult4.Hide();
             //GridResult1.DataSource = WinnerNumber;
             //ShuffleNumber.Columns.Add("Number");
             //WinnerNumber.Columns.Add("Number");
 
             //using (IDataAccess da = new SQLDataAccess())
             //{
-                //using (WinnerNumber = da.ExecuteQuery("EXEC spGetSessionDetail", null))
-                //{
-                    //var rows = WinnerNumber.AsEnumerable().Skip(0).Take(10);
+            //using (WinnerNumber = da.ExecuteQuery("EXEC spGetSessionDetail", null))
+            //{
+            //var rows = WinnerNumber.AsEnumerable().Skip(0).Take(10);
             ClearWinner();
             SetDefaultNumber();
             //DropDownSession.DataSource = GetDataSetting();
@@ -142,6 +145,9 @@ namespace DoorPrize
             ButtonStop.Enabled = false;
             var imagesStopDisabled = new Bitmap(DoorPrize.Properties.Resources.Stop_Btn_Disable);
             ButtonStop.Image = imagesStopDisabled;
+            string Exepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string fName = System.IO.Path.GetDirectoryName(Exepath) + "\\" + "DoorPrizeImages" + "\\LoadingGif.gif";
+            loadingImage.ImageLocation = "";
         }      
 
         private void ButtonShuffle_Click(object sender, EventArgs e)
@@ -197,8 +203,11 @@ namespace DoorPrize
                         ButtonleftArrow.Enabled = false;
 
                         TimerShuffle.Start();
-                    }
 
+                        string Exepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                        string fName = System.IO.Path.GetDirectoryName(Exepath) + "\\" + "DoorPrizeImages" + "\\Loading.gif";
+                        loadingImage.ImageLocation = fName;
+                    }
                     else
                     {
                         MessageBox.Show("This Session Already Closed!!!");
@@ -237,7 +246,7 @@ namespace DoorPrize
                     {
                         Random random = new Random();
                         int randomNumber = random.Next(0, ShuffleNumber.Rows.Count - 1);
-                        TextShuffle.Text = ShuffleNumber.Rows[randomNumber][0].ToString();
+                        //TextShuffle.Text = ShuffleNumber.Rows[randomNumber][1].ToString();
                     }
                 }
             }
@@ -308,7 +317,7 @@ namespace DoorPrize
                 if (WinnerNumber.Rows.Count <= Participant)
                 {
                     GridResult1.DataSource = WinnerNumber.AsEnumerable().Skip(0).Take(10).CopyToDataTable();
-
+                   
                     if (WinnerNumber.Rows.Count > 10 && WinnerNumber.Rows.Count <= 20)
                     {
                         GridResult2.DataSource = WinnerNumber.AsEnumerable().Skip(10).Take(20).CopyToDataTable();

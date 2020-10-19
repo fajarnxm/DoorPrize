@@ -33,6 +33,7 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LuckyDraw));
             this.GridResult1 = new Telerik.WinControls.UI.RadGridView();
             this.TimerShuffle = new System.Windows.Forms.Timer(this.components);
             this.TimerGetNumber = new System.Windows.Forms.Timer(this.components);
@@ -51,6 +52,7 @@
             this.LabelTotalSession = new System.Windows.Forms.Label();
             this.ImageDoorPrize = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadingImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridResult1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridResult1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridResult2)).BeginInit();
@@ -66,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ButtonleftArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageDoorPrize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +80,7 @@
             this.GridResult1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridResult1.ForeColor = System.Drawing.Color.Black;
             this.GridResult1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GridResult1.Location = new System.Drawing.Point(19, 446);
+            this.GridResult1.Location = new System.Drawing.Point(433, 446);
             // 
             // 
             // 
@@ -89,7 +92,7 @@
             this.GridResult1.ReadOnly = true;
             this.GridResult1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.GridResult1.ShowGroupPanel = false;
-            this.GridResult1.Size = new System.Drawing.Size(300, 290);
+            this.GridResult1.Size = new System.Drawing.Size(460, 290);
             this.GridResult1.TabIndex = 6;
             this.GridResult1.Text = "radGridView1";
             this.GridResult1.ThemeName = "VisualStudio2012Dark";
@@ -109,7 +112,7 @@
             this.GridResult2.AccessibleDescription = "";
             this.GridResult2.AutoSizeRows = true;
             this.GridResult2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GridResult2.Location = new System.Drawing.Point(352, 446);
+            this.GridResult2.Location = new System.Drawing.Point(1188, 454);
             // 
             // 
             // 
@@ -125,7 +128,7 @@
             this.GridResult2.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.GridResult2.Name = "GridResult2";
             this.GridResult2.ReadOnly = true;
-            this.GridResult2.Size = new System.Drawing.Size(300, 290);
+            this.GridResult2.Size = new System.Drawing.Size(130, 66);
             this.GridResult2.TabIndex = 7;
             this.GridResult2.Text = "radGridView1";
             this.GridResult2.ThemeName = "VisualStudio2012Dark";
@@ -138,7 +141,7 @@
             this.GridResult3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridResult3.ForeColor = System.Drawing.Color.Black;
             this.GridResult3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GridResult3.Location = new System.Drawing.Point(695, 446);
+            this.GridResult3.Location = new System.Drawing.Point(1188, 526);
             // 
             // 
             // 
@@ -155,7 +158,7 @@
             this.GridResult3.Name = "GridResult3";
             this.GridResult3.ReadOnly = true;
             this.GridResult3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GridResult3.Size = new System.Drawing.Size(300, 290);
+            this.GridResult3.Size = new System.Drawing.Size(135, 80);
             this.GridResult3.TabIndex = 7;
             this.GridResult3.Text = "radGridView1";
             this.GridResult3.ThemeName = "VisualStudio2012Dark";
@@ -177,13 +180,12 @@
             this.TextShuffle.AutoSize = false;
             this.TextShuffle.BackColor = System.Drawing.Color.Transparent;
             this.TextShuffle.BorderVisible = true;
-            this.TextShuffle.Font = new System.Drawing.Font("Stencil", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextShuffle.Font = new System.Drawing.Font("Stencil", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextShuffle.ForeColor = System.Drawing.Color.Goldenrod;
-            this.TextShuffle.Location = new System.Drawing.Point(567, 137);
+            this.TextShuffle.Location = new System.Drawing.Point(149, 153);
             this.TextShuffle.Name = "TextShuffle";
-            this.TextShuffle.Size = new System.Drawing.Size(173, 92);
+            this.TextShuffle.Size = new System.Drawing.Size(204, 92);
             this.TextShuffle.TabIndex = 12;
-            this.TextShuffle.Text = "xxxx";
             this.TextShuffle.Click += new System.EventHandler(this.TextShuffle_Click);
             // 
             // ButtonShuffle
@@ -191,7 +193,7 @@
             this.ButtonShuffle.BackColor = System.Drawing.Color.Transparent;
             this.ButtonShuffle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ButtonShuffle.Image = global::DoorPrize.Properties.Resources.Suffle_Btn_Active;
-            this.ButtonShuffle.Location = new System.Drawing.Point(379, 122);
+            this.ButtonShuffle.Location = new System.Drawing.Point(385, 122);
             this.ButtonShuffle.Name = "ButtonShuffle";
             // 
             // 
@@ -208,7 +210,7 @@
             this.ButtonStop.Enabled = false;
             this.ButtonStop.ForeColor = System.Drawing.Color.Transparent;
             this.ButtonStop.Image = global::DoorPrize.Properties.Resources.Stop_Btn_Disable;
-            this.ButtonStop.Location = new System.Drawing.Point(790, 122);
+            this.ButtonStop.Location = new System.Drawing.Point(849, 122);
             this.ButtonStop.Name = "ButtonStop";
             this.ButtonStop.Size = new System.Drawing.Size(135, 131);
             this.ButtonStop.TabIndex = 16;
@@ -222,7 +224,7 @@
             this.GridResult4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridResult4.ForeColor = System.Drawing.Color.Black;
             this.GridResult4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GridResult4.Location = new System.Drawing.Point(1033, 446);
+            this.GridResult4.Location = new System.Drawing.Point(1188, 612);
             // 
             // 
             // 
@@ -239,7 +241,7 @@
             this.GridResult4.Name = "GridResult4";
             this.GridResult4.ReadOnly = true;
             this.GridResult4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GridResult4.Size = new System.Drawing.Size(300, 290);
+            this.GridResult4.Size = new System.Drawing.Size(166, 124);
             this.GridResult4.TabIndex = 8;
             this.GridResult4.Text = "radGridView1";
             this.GridResult4.ThemeName = "VisualStudio2012Dark";
@@ -260,7 +262,7 @@
             // 
             this.ButtonRightArrow.BackColor = System.Drawing.Color.Transparent;
             this.ButtonRightArrow.Image = global::DoorPrize.Properties.Resources.right_black_arrow;
-            this.ButtonRightArrow.Location = new System.Drawing.Point(750, 153);
+            this.ButtonRightArrow.Location = new System.Drawing.Point(804, 153);
             this.ButtonRightArrow.Name = "ButtonRightArrow";
             this.ButtonRightArrow.Size = new System.Drawing.Size(25, 56);
             this.ButtonRightArrow.TabIndex = 20;
@@ -270,7 +272,7 @@
             // 
             this.ButtonleftArrow.BackColor = System.Drawing.Color.Transparent;
             this.ButtonleftArrow.Image = global::DoorPrize.Properties.Resources.left_black_arrow;
-            this.ButtonleftArrow.Location = new System.Drawing.Point(529, 153);
+            this.ButtonleftArrow.Location = new System.Drawing.Point(541, 153);
             this.ButtonleftArrow.Name = "ButtonleftArrow";
             // 
             // 
@@ -326,6 +328,16 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
+            // loadingImage
+            // 
+            this.loadingImage.BackColor = System.Drawing.Color.Transparent;
+            this.loadingImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("loadingImage.InitialImage")));
+            this.loadingImage.Location = new System.Drawing.Point(615, 122);
+            this.loadingImage.Name = "loadingImage";
+            this.loadingImage.Size = new System.Drawing.Size(150, 150);
+            this.loadingImage.TabIndex = 25;
+            this.loadingImage.TabStop = false;
+            // 
             // LuckyDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +345,7 @@
             this.BackgroundImage = global::DoorPrize.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1361, 738);
+            this.Controls.Add(this.loadingImage);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelTotalSession);
             this.Controls.Add(this.LabelOF);
@@ -374,6 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ButtonleftArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageDoorPrize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,5 +413,6 @@
         private System.Windows.Forms.Label LabelTotalSession;
         private System.Windows.Forms.PictureBox ImageDoorPrize;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox loadingImage;
     }
 }
