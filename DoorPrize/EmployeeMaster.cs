@@ -26,7 +26,7 @@ namespace DoorPrize
         {
             using(IDataAccess da = new SQLDataAccess())
             {
-                using (DataTable dt = da.ExecuteQuery("EXEC spGetDataEmployee", null))
+                using (DataTable dt = da.ExecuteQuery("EXEC spGetDataParticipant", null))
                 {
                     return dt;
                 }            
@@ -65,7 +65,7 @@ namespace DoorPrize
 
                 using(IDataAccess da = new SQLDataAccess())
                 {
-                    da.ExecuteNonQuery("EXEC spInsertUpdateMsEmployee '" + EMPLID + "', '" + name + "', '" + DeptName + "', '" + FlagAtt + "'", null);
+                    da.ExecuteNonQuery("EXEC spInsertUpdateMsParticipant '" + EMPLID + "', '" + name + "', '" + DeptName + "', '" + FlagAtt + "'", null);        
                 }
 
                 GridEmployeeMaster.DataSource = getDataEmployee();
@@ -87,7 +87,7 @@ namespace DoorPrize
 
                     using(IDataAccess da = new SQLDataAccess())
                     {
-                        da.ExecuteNonQuery("EXEC spInsertUpdateMsEmployee '" + EMPLID + "', '" + name + "', '" + DeptName + "', '" + FlagAtt + "'", null);
+                        da.ExecuteNonQuery("EXEC spInsertUpdateMsParticipant '" + EMPLID + "', '" + name + "', '" + DeptName + "', '" + FlagAtt + "'", null);
                     }
 
                     GridEmployeeMaster.DataSource = getDataEmployee();
@@ -101,6 +101,11 @@ namespace DoorPrize
             {
                 this.Close();
             }
+        }
+
+        private void GridEmployeeMaster_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

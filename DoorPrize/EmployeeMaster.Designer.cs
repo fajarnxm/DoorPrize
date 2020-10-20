@@ -68,6 +68,7 @@
             this.GridEmployeeMaster.Text = "radGridView1";
             this.GridEmployeeMaster.UserAddedRow += new Telerik.WinControls.UI.GridViewRowEventHandler(this.GridEmployeeMaster_UserAddedRow);
             this.GridEmployeeMaster.CellValueChanged += new Telerik.WinControls.UI.GridViewCellEventHandler(this.GridEmployeeMaster_CellValueChanged);
+            this.GridEmployeeMaster.Click += new System.EventHandler(this.GridEmployeeMaster_Click);
             // 
             // EmployeeMaster
             // 

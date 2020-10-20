@@ -9,6 +9,7 @@ using Telerik.WinControls;
 using DoorPrize.framework;
 using Telerik.WinControls.UI;
 using Telerik.WinControls.Data;
+using System.Data.SqlClient;
 
 namespace DoorPrize
 {
@@ -94,63 +95,63 @@ namespace DoorPrize
         private void TextName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //MessageBox.Show(TextName.Text);
-            if (e.KeyChar == (char)Keys.Return)
-            {
-                using (IDataAccess da = new SQLDataAccess())
+            //if (e.KeyChar == (char)Keys.Return)
+            //{
+            //    using (IDataAccess da = new SQLDataAccess())
 
            
-                {
-                    using (DataTable dt = da.ExecuteQuery("EXEC spGetCardNumberData '" + TextName.Text + "'", null))
-                    {
-                        if (dt.Rows.Count == 0)
-                        {
-                            LabelNotif.Text = "Registration Failed!";
-                            TextName.Clear();
-                            //LabelDepartment.Text = null;
-                            return;
-                        }
+            //    {
+            //        using (DataTable dt = da.ExecuteQuery("EXEC spGetCardNumberData '" + TextName.Text + "'", null))
+            //        {
+            //            if (dt.Rows.Count == 0)
+            //            {
+            //                LabelNotif.Text = "Registration Failed!";
+            //                TextName.Clear();
+            //                //LabelDepartment.Text = null;
+            //                return;
+            //            }
 
-                        TextName.Text = dt.Rows[0]["EmployeeName"].ToString();
-                        //LabelDepartment.Text = dt.Rows[0]["DeptName"].ToString();
-                        //using (IDbTransaction tran = da.BeginTran())
-                        //{
-                        try
-                        {
+            //            TextName.Text = dt.Rows[0]["EmployeeName"].ToString();
+            //            //LabelDepartment.Text = dt.Rows[0]["DeptName"].ToString();
+            //            //using (IDbTransaction tran = da.BeginTran())
+            //            //{
+            //            try
+            //            {
 
-                            int test = -1;
-
-
-                            Dictionary<string, object> vars = new Dictionary<string, object>();
-                            vars.Add("@EMPLID", dt.Rows[0]["EmployeeKey"].ToString());
+            //                int test = -1;
 
 
-                            test = da.ExecuteNonQueryR("SpUpdateFlagAbsensi", vars);
+            //                Dictionary<string, object> vars = new Dictionary<string, object>();
+            //                vars.Add("@EMPLID", dt.Rows[0]["EmployeeKey"].ToString());
 
-                            //tran.Commit();
-                            ///MessageBox.Show("Registration For "+dt.Rows[0]["EmployeeName"].ToString()+ ", Department:" + dt.Rows[0]["DeptName"].ToString() +" Has Success!");
-                            //TextName.AutoCompleteDataSource = GetAutoComplete();
-                            //LabelNotif.ForeColor = Color.Green;
 
-                            if (test == 1)
-                                LabelNotif.Text = "Registration For " + dt.Rows[0]["EmployeeName"].ToString() + ", Department:" + dt.Rows[0]["DeptName"].ToString() + " Has Success!";
-                            else
-                                LabelNotif.Text = dt.Rows[0]["EmployeeName"].ToString() + ", Department:" + dt.Rows[0]["DeptName"].ToString() + " ALREADY REGISTERED FOR THIS SESSION!";
-                            TextName.Clear();
-                            //LabelDepartment.Text = null; 
+            //                test = da.ExecuteNonQueryR("SpUpdateFlagAbsensi", vars);
 
-                            LabelTotalAttendance.Text = da.ExecuteQuery("EXEC spGetNumberOfAttendance", null).Rows[0][0].ToString();
-                        }
-                        catch (Exception err)
-                        {
-                            //tran.Rollback();
-                            MessageBox.Show(err.Message);
-                        }
-                        //}
-                    }
+            //                //tran.Commit();
+            //                ///MessageBox.Show("Registration For "+dt.Rows[0]["EmployeeName"].ToString()+ ", Department:" + dt.Rows[0]["DeptName"].ToString() +" Has Success!");
+            //                //TextName.AutoCompleteDataSource = GetAutoComplete();
+            //                //LabelNotif.ForeColor = Color.Green;
 
-                    //TextName.Text = a;
-                }
-            }
+            //                if (test == 1)
+            //                    LabelNotif.Text = "Registration For " + dt.Rows[0]["EmployeeName"].ToString() + ", Department:" + dt.Rows[0]["DeptName"].ToString() + " Has Success!";
+            //                else
+            //                    LabelNotif.Text = dt.Rows[0]["EmployeeName"].ToString() + ", Department:" + dt.Rows[0]["DeptName"].ToString() + " ALREADY REGISTERED FOR THIS SESSION!";
+            //                TextName.Clear();
+            //                //LabelDepartment.Text = null; 
+
+            //                LabelTotalAttendance.Text = da.ExecuteQuery("EXEC spGetNumberOfAttendance", null).Rows[0][0].ToString();
+            //            }
+            //            catch (Exception err)
+            //            {
+            //                //tran.Rollback();
+            //                MessageBox.Show(err.Message);
+            //            }
+            //            //}
+            //        }
+
+            //        //TextName.Text = a;
+            //    }
+            //}
         }
 
         private void LinkFullVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -171,7 +172,7 @@ namespace DoorPrize
         {
             using (IDataAccess da = new SQLDataAccess())
             {
-                LabelTotalAttendance.Text = da.ExecuteQuery("EXEC spGetNumberOfAttendance", null).Rows[0][0].ToString();
+                LabelTotalAttendance.Text = da.ExecuteQuery("EXEC spGetNumberOfAttendance2", null).Rows[0][0].ToString();
             }
         }
 
@@ -181,6 +182,30 @@ namespace DoorPrize
         }
 
         private void TextName2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (TextName.Text != "" && TextName2.Text != "")
+            {
+                using (IDataAccess da = new SQLDataAccess())
+                {
+                    da.ExecuteNonQuery("EXEC spInsertParticipant '" + TextName.Text + "', '" + TextName2.Text + "'", null);
+                    LabelNotif.Text = "Registration For " + TextName.Text + ", Email:" + TextName2.Text + " Has Success!";
+                    TextName.Clear();
+                    TextName2.Clear();
+                }
+            }
+            else
+            {
+                LabelNotif.Text = "Registration Failed!";
+                //MessageBox.Show("Registration Failed!");
+            }
+        }
+
+        private void TextName_TextChanged(object sender, EventArgs e)
         {
 
         }

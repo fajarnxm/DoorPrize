@@ -231,7 +231,7 @@ namespace DoorPrize
                 //    temp = defaultNumber;
                 //}
 
-                using (DataTable dt = da.ExecuteQuery("EXEC spGenerateRandomNumber '" + temp + "'", null))
+                using (DataTable dt = da.ExecuteQuery("EXEC spGenerateRandomNumber2 '" + temp + "'", null))
                 {
                     if (dt.Rows.Count > 0)
                     {
