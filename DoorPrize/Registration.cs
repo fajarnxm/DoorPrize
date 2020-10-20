@@ -180,6 +180,11 @@ namespace DoorPrize
 
         }
 
+        private void TextName2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //    private void radTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         //{
         //        using (IDataAccess da = new SQLDataAccess())

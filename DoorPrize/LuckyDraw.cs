@@ -145,9 +145,10 @@ namespace DoorPrize
             ButtonStop.Enabled = false;
             var imagesStopDisabled = new Bitmap(DoorPrize.Properties.Resources.Stop_Btn_Disable);
             ButtonStop.Image = imagesStopDisabled;
-            string Exepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string fName = System.IO.Path.GetDirectoryName(Exepath) + "\\" + "DoorPrizeImages" + "\\LoadingGif.gif";
-            loadingImage.ImageLocation = "";
+            //TextShuffle.Text = "STOP";
+            //string Exepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            //string fName = System.IO.Path.GetDirectoryName(Exepath) + "\\" + "DoorPrizeImages" + "\\LoadingGif.gif";
+            //loadingImage.ImageLocation = "";
         }      
 
         private void ButtonShuffle_Click(object sender, EventArgs e)
@@ -204,9 +205,9 @@ namespace DoorPrize
 
                         TimerShuffle.Start();
 
-                        string Exepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                        string fName = System.IO.Path.GetDirectoryName(Exepath) + "\\" + "DoorPrizeImages" + "\\Loading.gif";
-                        loadingImage.ImageLocation = fName;
+                        //string Exepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                        //string fName = System.IO.Path.GetDirectoryName(Exepath) + "\\" + "DoorPrizeImages" + "\\Loading.gif";
+                        //loadingImage.ImageLocation = fName;
                     }
                     else
                     {
@@ -246,7 +247,7 @@ namespace DoorPrize
                     {
                         Random random = new Random();
                         int randomNumber = random.Next(0, ShuffleNumber.Rows.Count - 1);
-                        //TextShuffle.Text = ShuffleNumber.Rows[randomNumber][1].ToString();
+                        TextShuffle.Text = ShuffleNumber.Rows[randomNumber][1].ToString();
                     }
                 }
             }
@@ -261,7 +262,8 @@ namespace DoorPrize
                 {
                     TimerGetNumber.Stop();
                     TimerShuffle.Stop();
-
+                    //set winner name
+                    TextShuffle.Text = WinnerNumber.Rows[0][1].ToString();
                     string temp = "";
                     temp = LabelSession.Text;
                     //if (DropDownSession.SelectedIndex <= 0)

@@ -71,7 +71,7 @@
             this.LinkFullVersion.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.LinkFullVersion.Location = new System.Drawing.Point(904, 549);
             this.LinkFullVersion.Name = "LinkFullVersion";
-            this.LinkFullVersion.Size = new System.Drawing.Size(113, 28);
+            this.LinkFullVersion.Size = new System.Drawing.Size(112, 28);
             this.LinkFullVersion.TabIndex = 9;
             this.LinkFullVersion.TabStop = true;
             this.LinkFullVersion.Text = "Full Version";
@@ -101,6 +101,7 @@
             this.TextName2.Size = new System.Drawing.Size(703, 36);
             this.TextName2.TabIndex = 11;
             this.TextName2.Visible = false;
+            this.TextName2.TextChanged += new System.EventHandler(this.TextName2_TextChanged);
             // 
             // LabelNumberAttendance
             // 

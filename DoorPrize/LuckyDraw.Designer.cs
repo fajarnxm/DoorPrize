@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition10 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition11 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition12 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LuckyDraw));
             this.GridResult1 = new Telerik.WinControls.UI.RadGridView();
             this.TimerShuffle = new System.Windows.Forms.Timer(this.components);
@@ -87,7 +87,7 @@
             this.GridResult1.MasterTemplate.AllowAddNewRow = false;
             this.GridResult1.MasterTemplate.AllowColumnReorder = false;
             this.GridResult1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.GridResult1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.GridResult1.MasterTemplate.ViewDefinition = tableViewDefinition9;
             this.GridResult1.Name = "GridResult1";
             this.GridResult1.ReadOnly = true;
             this.GridResult1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -125,7 +125,7 @@
             this.GridResult2.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.GridResult2.MasterTemplate.EnableGrouping = false;
             this.GridResult2.MasterTemplate.EnableSorting = false;
-            this.GridResult2.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.GridResult2.MasterTemplate.ViewDefinition = tableViewDefinition10;
             this.GridResult2.Name = "GridResult2";
             this.GridResult2.ReadOnly = true;
             this.GridResult2.Size = new System.Drawing.Size(130, 66);
@@ -141,7 +141,7 @@
             this.GridResult3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridResult3.ForeColor = System.Drawing.Color.Black;
             this.GridResult3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GridResult3.Location = new System.Drawing.Point(1188, 526);
+            this.GridResult3.Location = new System.Drawing.Point(1188, 559);
             // 
             // 
             // 
@@ -154,11 +154,11 @@
             this.GridResult3.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.GridResult3.MasterTemplate.EnableGrouping = false;
             this.GridResult3.MasterTemplate.EnableSorting = false;
-            this.GridResult3.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.GridResult3.MasterTemplate.ViewDefinition = tableViewDefinition11;
             this.GridResult3.Name = "GridResult3";
             this.GridResult3.ReadOnly = true;
             this.GridResult3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GridResult3.Size = new System.Drawing.Size(135, 80);
+            this.GridResult3.Size = new System.Drawing.Size(166, 80);
             this.GridResult3.TabIndex = 7;
             this.GridResult3.Text = "radGridView1";
             this.GridResult3.ThemeName = "VisualStudio2012Dark";
@@ -180,12 +180,14 @@
             this.TextShuffle.AutoSize = false;
             this.TextShuffle.BackColor = System.Drawing.Color.Transparent;
             this.TextShuffle.BorderVisible = true;
-            this.TextShuffle.Font = new System.Drawing.Font("Stencil", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextShuffle.Font = new System.Drawing.Font("Stencil", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextShuffle.ForeColor = System.Drawing.Color.Goldenrod;
-            this.TextShuffle.Location = new System.Drawing.Point(149, 153);
+            this.TextShuffle.Location = new System.Drawing.Point(509, 138);
             this.TextShuffle.Name = "TextShuffle";
-            this.TextShuffle.Size = new System.Drawing.Size(204, 92);
+            this.TextShuffle.Size = new System.Drawing.Size(277, 92);
             this.TextShuffle.TabIndex = 12;
+            this.TextShuffle.Text = "XXXX";
+            this.TextShuffle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.TextShuffle.Click += new System.EventHandler(this.TextShuffle_Click);
             // 
             // ButtonShuffle
@@ -193,7 +195,7 @@
             this.ButtonShuffle.BackColor = System.Drawing.Color.Transparent;
             this.ButtonShuffle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ButtonShuffle.Image = global::DoorPrize.Properties.Resources.Suffle_Btn_Active;
-            this.ButtonShuffle.Location = new System.Drawing.Point(385, 122);
+            this.ButtonShuffle.Location = new System.Drawing.Point(325, 122);
             this.ButtonShuffle.Name = "ButtonShuffle";
             // 
             // 
@@ -210,7 +212,7 @@
             this.ButtonStop.Enabled = false;
             this.ButtonStop.ForeColor = System.Drawing.Color.Transparent;
             this.ButtonStop.Image = global::DoorPrize.Properties.Resources.Stop_Btn_Disable;
-            this.ButtonStop.Location = new System.Drawing.Point(849, 122);
+            this.ButtonStop.Location = new System.Drawing.Point(833, 122);
             this.ButtonStop.Name = "ButtonStop";
             this.ButtonStop.Size = new System.Drawing.Size(135, 131);
             this.ButtonStop.TabIndex = 16;
@@ -224,7 +226,7 @@
             this.GridResult4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridResult4.ForeColor = System.Drawing.Color.Black;
             this.GridResult4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GridResult4.Location = new System.Drawing.Point(1188, 612);
+            this.GridResult4.Location = new System.Drawing.Point(1188, 645);
             // 
             // 
             // 
@@ -237,11 +239,11 @@
             this.GridResult4.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.GridResult4.MasterTemplate.EnableGrouping = false;
             this.GridResult4.MasterTemplate.EnableSorting = false;
-            this.GridResult4.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.GridResult4.MasterTemplate.ViewDefinition = tableViewDefinition12;
             this.GridResult4.Name = "GridResult4";
             this.GridResult4.ReadOnly = true;
             this.GridResult4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GridResult4.Size = new System.Drawing.Size(166, 124);
+            this.GridResult4.Size = new System.Drawing.Size(166, 91);
             this.GridResult4.TabIndex = 8;
             this.GridResult4.Text = "radGridView1";
             this.GridResult4.ThemeName = "VisualStudio2012Dark";
@@ -262,7 +264,7 @@
             // 
             this.ButtonRightArrow.BackColor = System.Drawing.Color.Transparent;
             this.ButtonRightArrow.Image = global::DoorPrize.Properties.Resources.right_black_arrow;
-            this.ButtonRightArrow.Location = new System.Drawing.Point(804, 153);
+            this.ButtonRightArrow.Location = new System.Drawing.Point(792, 153);
             this.ButtonRightArrow.Name = "ButtonRightArrow";
             this.ButtonRightArrow.Size = new System.Drawing.Size(25, 56);
             this.ButtonRightArrow.TabIndex = 20;
@@ -272,7 +274,7 @@
             // 
             this.ButtonleftArrow.BackColor = System.Drawing.Color.Transparent;
             this.ButtonleftArrow.Image = global::DoorPrize.Properties.Resources.left_black_arrow;
-            this.ButtonleftArrow.Location = new System.Drawing.Point(541, 153);
+            this.ButtonleftArrow.Location = new System.Drawing.Point(477, 153);
             this.ButtonleftArrow.Name = "ButtonleftArrow";
             // 
             // 
@@ -332,7 +334,7 @@
             // 
             this.loadingImage.BackColor = System.Drawing.Color.Transparent;
             this.loadingImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("loadingImage.InitialImage")));
-            this.loadingImage.Location = new System.Drawing.Point(615, 122);
+            this.loadingImage.Location = new System.Drawing.Point(-1, 122);
             this.loadingImage.Name = "loadingImage";
             this.loadingImage.Size = new System.Drawing.Size(150, 150);
             this.loadingImage.TabIndex = 25;
