@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition10 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition11 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition12 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LuckyDraw));
             this.GridResult1 = new Telerik.WinControls.UI.RadGridView();
             this.TimerShuffle = new System.Windows.Forms.Timer(this.components);
@@ -87,7 +87,7 @@
             this.GridResult1.MasterTemplate.AllowAddNewRow = false;
             this.GridResult1.MasterTemplate.AllowColumnReorder = false;
             this.GridResult1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.GridResult1.MasterTemplate.ViewDefinition = tableViewDefinition9;
+            this.GridResult1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.GridResult1.Name = "GridResult1";
             this.GridResult1.ReadOnly = true;
             this.GridResult1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -125,7 +125,7 @@
             this.GridResult2.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.GridResult2.MasterTemplate.EnableGrouping = false;
             this.GridResult2.MasterTemplate.EnableSorting = false;
-            this.GridResult2.MasterTemplate.ViewDefinition = tableViewDefinition10;
+            this.GridResult2.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.GridResult2.Name = "GridResult2";
             this.GridResult2.ReadOnly = true;
             this.GridResult2.Size = new System.Drawing.Size(130, 66);
@@ -154,7 +154,7 @@
             this.GridResult3.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.GridResult3.MasterTemplate.EnableGrouping = false;
             this.GridResult3.MasterTemplate.EnableSorting = false;
-            this.GridResult3.MasterTemplate.ViewDefinition = tableViewDefinition11;
+            this.GridResult3.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.GridResult3.Name = "GridResult3";
             this.GridResult3.ReadOnly = true;
             this.GridResult3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -181,7 +181,7 @@
             this.TextShuffle.BackColor = System.Drawing.Color.Transparent;
             this.TextShuffle.BorderVisible = true;
             this.TextShuffle.Font = new System.Drawing.Font("Stencil", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextShuffle.ForeColor = System.Drawing.Color.Goldenrod;
+            this.TextShuffle.ForeColor = System.Drawing.Color.Black;
             this.TextShuffle.Location = new System.Drawing.Point(509, 138);
             this.TextShuffle.Name = "TextShuffle";
             this.TextShuffle.Size = new System.Drawing.Size(277, 92);
@@ -239,7 +239,7 @@
             this.GridResult4.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.GridResult4.MasterTemplate.EnableGrouping = false;
             this.GridResult4.MasterTemplate.EnableSorting = false;
-            this.GridResult4.MasterTemplate.ViewDefinition = tableViewDefinition12;
+            this.GridResult4.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.GridResult4.Name = "GridResult4";
             this.GridResult4.ReadOnly = true;
             this.GridResult4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -326,7 +326,7 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1367, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(11, 122);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
@@ -344,7 +344,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DoorPrize.Properties.Resources.bg;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1361, 738);
             this.Controls.Add(this.loadingImage);

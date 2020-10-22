@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.LabelRegistration = new System.Windows.Forms.Label();
             this.TextName = new Telerik.WinControls.UI.RadAutoCompleteBox();
             this.LinkFullVersion = new System.Windows.Forms.LinkLabel();
@@ -51,7 +52,7 @@
             // 
             this.LabelRegistration.BackColor = System.Drawing.Color.Transparent;
             this.LabelRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.74999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRegistration.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelRegistration.ForeColor = System.Drawing.Color.Black;
             this.LabelRegistration.Location = new System.Drawing.Point(268, 34);
             this.LabelRegistration.Name = "LabelRegistration";
             this.LabelRegistration.Size = new System.Drawing.Size(410, 148);
@@ -127,7 +128,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.74999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(630, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
@@ -181,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::DoorPrize.Properties.Resources.bg;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1229, 558);
             this.Controls.Add(this.TextName2);

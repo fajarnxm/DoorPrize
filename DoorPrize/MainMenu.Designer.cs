@@ -93,7 +93,7 @@
             this.PictureStriveWinning.InitialImage = null;
             this.PictureStriveWinning.Location = new System.Drawing.Point(77, 3);
             this.PictureStriveWinning.Name = "PictureStriveWinning";
-            this.PictureStriveWinning.Size = new System.Drawing.Size(271, 204);
+            this.PictureStriveWinning.Size = new System.Drawing.Size(10, 204);
             this.PictureStriveWinning.TabIndex = 6;
             this.PictureStriveWinning.TabStop = false;
             // 
@@ -102,9 +102,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DoorPrize.Properties.Resources.titleBHPluckyDraw;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(411, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(176, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(614, 191);
+            this.pictureBox1.Size = new System.Drawing.Size(12, 191);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DoorPrize.Properties.Resources.background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1367, 748);
             this.Controls.Add(this.pictureBox2);

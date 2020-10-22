@@ -193,7 +193,7 @@ namespace DoorPrize
                 using (IDataAccess da = new SQLDataAccess())
                 {
                     da.ExecuteNonQuery("EXEC spInsertParticipant '" + TextName.Text + "', '" + TextName2.Text + "'", null);
-                    LabelNotif.Text = "Registration For " + TextName.Text + ", Email:" + TextName2.Text + " Has Success!";
+                    LabelNotif.Text = "Registration For : " + TextName.Text + ", Email : " + TextName2.Text + " Has Success!";
                     TextName.Clear();
                     TextName2.Clear();
                 }
